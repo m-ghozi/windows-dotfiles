@@ -130,7 +130,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$PATH:/home/shiro/.local/bin
 
 #oh-my-posh config
-#eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/di4am0nd.omp.json)"
 eval "$(oh-my-posh init bash --config ~/project/clone/dotfiles/powershell/my-theme1.omp.json)"
 
 . ~/z.sh
