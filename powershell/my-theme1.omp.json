@@ -3,11 +3,12 @@
   "blocks": [
     {
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
           "foreground": "#BD93F9",
           "style": "plain",
-          "template": "{{ .UserName }}'s ",
+          "template": "\n{{ .UserName }}'s ",
           "type": "session"
         },
         {
@@ -36,6 +37,15 @@
           "style": "plain",
           "template": "<#ffffff>via</> \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
+        },
+        {
+          "foreground": "#E4F34A",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#ffffff>-</> \ue235 {{ .Full }}",
+          "type": "python"
         }
       ],
       "type": "prompt"
@@ -44,9 +54,28 @@
       "alignment": "right",
       "segments": [
         {
+          "foreground": "#9B6BDF",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#FF5555{{end}}",
+            "{{if eq \"Full\" .State.String}}#50FA7B{{end}}"
+          ],
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "charged_icon": " ",
+            "charging_icon": "\u21e1 ",
+            "discharging_icon": "\u21e3 "
+          },
+          "style": "plain",
+          "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "battery"
+        },
+        {
           "foreground": "#50FA7B",
+          "leading_diamond": "\u250b",
           "style": "diamond",
-          "template": "RAM:{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
+          "template": " {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
           "trailing_diamond": " ",
           "type": "sysinfo"
         },
