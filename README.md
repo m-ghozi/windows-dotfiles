@@ -1,6 +1,7 @@
 <a id="readme-top"></a>
 # Ghozi's dotfiles
-
+![alt text](./images/v2.png)
+![alt text](./images/v3.png)
 Special thanks to [craftzdog](https://github.com/craftzdog) for sharing their dotfiles setup, which provided valuable inspiration and guidance for my dotfiles.
 
 Check out his awesome [dotfiles repository](https://github.com/craftzdog/dotfiles-public) for more setup ideas and configuration tips.
