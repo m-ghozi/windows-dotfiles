@@ -15,9 +15,8 @@ Check out his awesome [dotfiles repository](https://github.com/craftzdog/dotfile
 - terminal config
 
 ## Neovim setup
-
+see this repo [neovim-dotfiles](https://github.com/m-ghozi/neovim-dotfiles)
 ### Requirements
-
 - Neovim >= **0.10.2** (needs to be built with **LuaJIT**)
 - Git >= **2.19.0** (for partial clones support)
 - [LazyVim](https://www.lazyvim.org/)
@@ -57,4 +56,6 @@ Check out his awesome [dotfiles repository](https://github.com/craftzdog/dotfile
 - Theme base [Dracula](https://draculatheme.com/windows-terminal) - Dracula Theme for Windows Terminal
 - [Nerd Font](https://www.nerdfonts.com/) - Iconic font aggregator, collection, and patcher
 
+
+TODO : update this readme
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
