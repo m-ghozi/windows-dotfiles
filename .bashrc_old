@@ -97,7 +97,7 @@ alias lt='ls --tree'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -130,16 +130,12 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$PATH:/home/shiro/.local/bin
 
 #oh-my-posh config
-eval "$(oh-my-posh init bash --config ~/clone/windows-dotfiles/.config/powershell/gruvbox.omp.json)"
+eval "$(oh-my-posh init bash --config ~/project/clone/dotfiles/powershell/my-theme1.omp.json)"
 
 . ~/z.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # If not running interactively, do not do anything
-# [[ $- != *i* ]] && return
-# # Otherwise start tmux
-# [[ -z "$TMUX" ]] && exec tmux
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+[[ $- != *i* ]] && return
+# Otherwise start tmux
+[[ -z "$TMUX" ]] && exec tmux
